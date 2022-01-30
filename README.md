@@ -1,5 +1,7 @@
 # Python-PKSUID
 
+[![PyPI version fury.io](https://badge.fury.io/py/pksuid.svg)](https://pypi.python.org/pypi/pksuid/)
+
 ### (Prefixed K-Sortable Unique IDentifier)
 
 This library provides an enhancement to the KSUID identifier 
@@ -14,6 +16,12 @@ with a prefix, inspired by the Stripe prefixed IDs, such as `txn_1032HU2eZvKYlo2
 This in turn makes it easy for developers to see at a glance the underlying type of the 
 resource that the identifier refers to, and makes for easier reading/tracing of resources 
 in various locations, such as log files.
+
+## Installation
+
+The package is available on PyPi, simply install with:
+
+`pip install pksuid`
 
 ## Usage
 
