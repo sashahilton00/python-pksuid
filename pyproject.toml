@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "python-pksuid"
+version = "1.0.0"
+description = "Python package for generating prefixed ksuids."
+authors = ["Sasha Hilton <sashahilton00@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/sashahilton00/python-pksuid"
+keywords = ["uuid", "ksuid", "pksuid"]
+exclude = ["example.py"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+pybase62 = "0.4.3"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.5"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
