@@ -163,3 +163,6 @@ class PKSUID:
 
     def __str__(self):
         return str(self.bytes().decode('utf-8'))
+
+    def __hash__(self):
+        return hash(str(self))
