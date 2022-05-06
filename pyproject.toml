@@ -1,12 +1,12 @@
 [tool.poetry]
 name = "pksuid"
-version = "1.0.0"
+version = "1.1.0"
 description = "Python package for generating prefixed ksuids."
 authors = ["Sasha Hilton <sashahilton00@gmail.com>"]
 license = "MIT"
 readme = "README.md"
 repository = "https://github.com/sashahilton00/python-pksuid"
-keywords = ["uuid", "ksuid", "pksuid"]
+keywords = ["uid", "uuid", "ksuid", "pksuid"]
 exclude = ["example.py", ".idea/"]
 
 [tool.poetry.dependencies]
