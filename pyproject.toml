@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pksuid"
-version = "1.1.0"
+version = "1.1.1"
 description = "Python package for generating prefixed ksuids."
 authors = ["Sasha Hilton <sashahilton00@gmail.com>"]
 license = "MIT"
