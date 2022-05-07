@@ -118,3 +118,11 @@ def test_comparison():
 
     assert pksuid_3 < pksuid_4
     assert (pksuid_3 >= pksuid_4) is False
+
+def test_eq_false_incompatible_type():
+    not_a_pksuid = Exception('testing')
+    pksuid = PKSUID('test')
+
+    # should return False due to not being able to parse exception to pksuid
+    assert not pksuid == not_a_pksuid
+    assert pksuid != not_a_pksuid

@@ -115,7 +115,7 @@ class PKSUID:
             prefix, uid = value.__prefix, value.__uid
         else:
             try:
-                prefix, b62_uid = value.split('_')
+                prefix, b62_uid = str(value).split('_')
                 uid = base62.decodebytes(b62_uid)
             except ValueError:
                 raise PKSUIDParseError('value does not appear to be a valid PKSUID')
@@ -146,12 +146,15 @@ class PKSUID:
     def __eq__(self, val):
         # NB: we only check prefix in equivalence operators.
         # This is to allow comparison in other cases between PKSUID instances with differing prefixes
-        other_pksuid = PKSUID.parse(val)
+        try:
+            other_pksuid = PKSUID.parse(val)
+        except PKSUIDBaseError:
+            return False
+
         return self.uid == other_pksuid.uid and self.prefix == other_pksuid.prefix
 
     def __ne__(self, val):
-        other_pksuid = PKSUID.parse(val)
-        return self.uid != other_pksuid.uid or self.prefix != other_pksuid.prefix
+        return not self.__eq__(val)
 
     def __ge__(self, val):
         other_pksuid = PKSUID.parse(val)
